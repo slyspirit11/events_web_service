@@ -1,0 +1,33 @@
+{% extends "index.html" %}
+{% block title %}Sign-up{% endblock %}
+{% block content %}
+<form method="POST">
+    <form-group>
+        <div class="mb-3 mt-5">
+            <label for="inputUsername" class="form-label" required>Никнейм</label>
+            <input type="username" class="form-control" id="username" name="username">
+        </div>
+        <div class="mb-3">
+            <label for="inputEmail" class="form-label" required>Электронная почта</label>
+            <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+            <label for="inputPassword" class="form-label" required>Пароль</label>
+            <input type="password" class="form-control" id="inputPassword" name="password">
+        </div>
+        <div class="mb-3">
+            <label for="inputPasswordTest" class="form-label" required>Подтверждение пароля</label>
+            <input type="password-test" class="form-control" id="inputPasswordTest" name="password-test">
+        </div>
+        <div class="form-check">
+            <input type="radio" class="check-role1" id="validationFormCheck1" name="role-check1" checked>
+            <label class="form-check-label" for="validationFormCheck1">Участник</label>
+          </div>
+          <div class="form-check mb-3">
+            <input type="radio" class="check-role2" id="validationFormCheck2" name="role-check2">
+            <label class="form-check-label" for="validationFormCheck2">Организатор</label>
+          </div>
+        <button type="submit" class="btn btn-primary">Регистрация</button>
+    </form-group>
+</form>
+{% endblock %}
